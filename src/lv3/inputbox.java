@@ -1,14 +1,10 @@
 package lv3;
 
 public class inputbox {
-    public inputbox() {
-    }
 
-    public Double inputNum(String num1) {
-        return Double.parseDouble(num1);
-    }
+    public Double inputNum(String num) throws NumberFormatException { return Double.parseDouble(num); }
 
-    public OperatorType inputOper(String oper) {
+    public OperatorType inputOper(String oper) throws IllegalArgumentException {
         return OperatorType.setoperator(oper);
     }
 }
