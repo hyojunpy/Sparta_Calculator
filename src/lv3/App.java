@@ -33,7 +33,18 @@ public class App {
             String etc = sc.nextLine();
             if (etc.equals("exit")) break;
             if (etc.equals("remove")) arithmeticCalculator.removeResult();
+//            입력값보다 큰 결과들 출력 (스트림 안쓴 식 )
+            try{
+            if (etc.matches("^[0-9]*$"))  {
+                for (double a : arithmeticCalculator.getResult()) {
+                    if (a > inputbox.inputNum(etc)) {
+                        System.out.println(a);
+                    }
+                }
+            }
+            }catch( NumberFormatException e) {
 
+            }
         }
     }
 }
