@@ -1,6 +1,6 @@
 package lv3;
 
-public class inputbox {
+public class InputBox {
 
     public Double inputNum(String num) throws NumberFormatException { return Double.parseDouble(num); }
 
