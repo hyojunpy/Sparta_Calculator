@@ -34,15 +34,15 @@ public class App {
             if (etc.equals("exit")) break;
             if (etc.equals("remove")) arithmeticCalculator.removeResult();
 
-                        try {
+            try {
                 if (etc.matches("^[0-9]*$")) {
                     double Inputnum = inputbox.inputNum(etc);
                     List<Double> betterresult = arithmeticCalculator.getResult().stream().filter(result -> result > Inputnum).collect(Collectors.toList());
-                    for(double outputnum : betterresult) {
+                    for (double outputnum : betterresult) {
                         System.out.println(outputnum);
                     }
                 }
-            }catch (NumberFormatException e) {
+            } catch (NumberFormatException e) {
 
             }
 
