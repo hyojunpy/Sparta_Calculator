@@ -21,7 +21,7 @@ public enum OperatorType {
     private final String operator;
     private static OperatorType setoper;
 
-    private OperatorType(String operator, DoubleBinaryOperator op) {
+    OperatorType(String operator, DoubleBinaryOperator op) {
         this.operator = operator;
         this.op = op;
     }
@@ -35,16 +35,12 @@ public enum OperatorType {
     }
 
     public static OperatorType setoperator(String findoper) {
-        OperatorType[] var1 = values();
-        int var2 = var1.length;
-
-        for(int var3 = 0; var3 < var2; ++var3) {
-            OperatorType oper = var1[var3];
+        setoper = null;
+        for(OperatorType oper : OperatorType.values()) {
             if (oper.operator.equals(findoper)) {
                 setoper = oper;
             }
         }
-
         return setoper;
     }
 }

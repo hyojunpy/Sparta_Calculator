@@ -26,7 +26,7 @@ public class App {
                     System.out.print("연산자를 입력하세요 : ");
                     OperatorType oper = inputbox.inputOper(sc.nextLine());
                     System.out.println(arithmeticCalculator.calculate(num1, num2, oper));
-                } catch (IllegalArgumentException e) {
+                } catch (IllegalArgumentException | NullPointerException e) {
                     System.out.println("올바른 연산자가 아닙니다.");
                 }
             } catch (NumberFormatException e) {
@@ -53,6 +53,7 @@ public class App {
             } finally {
                 continue;
             }
+
         }
     }
     //            입력값보다 큰 결과들 출력 (스트림 안쓴 식 )
