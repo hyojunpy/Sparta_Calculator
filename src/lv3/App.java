@@ -33,10 +33,10 @@ public class App {
                 System.out.println("올바른 정수가 아닙니다.");
             }
 
+            //기능 구현
             System.out.println("더 계산하시겠습니까? (exit입력 시 종료 / 진행시 Enter 키 입력)");
             System.out.println("가장 먼저 저장된 데이터를 삭제하시겠습니까? (remove 입력 시 삭제 / 진행시 Enter 키 입력)");
             System.out.println("입력한 값보다 큰 결과들을 출력 하시려면 정수를 입력하세요 (진행시 Enter 키 입력)");
-
             String etc = sc.nextLine();
             if (etc.equals("exit")) break;
             if (etc.equals("remove")) arithmeticCalculator.removeResult();
@@ -53,19 +53,6 @@ public class App {
             } finally {
                 continue;
             }
-
         }
     }
-    //            입력값보다 큰 결과들 출력 (스트림 안쓴 식 )
-//            try{
-//            if (etc.matches("^[0-9]*$"))  {
-//                for (double a : arithmeticCalculator.getResult()) {
-//                    if (a > inputbox.inputNum(etc)) {
-//                        System.out.println(a);
-//                    }
-//                }
-//            }
-//            }catch( NumberFormatException e) {
-//
-//            }
 }
